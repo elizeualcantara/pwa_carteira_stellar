@@ -1,1 +1,3 @@
 ***** Pontos para desenvolvimento de Prototipo Basico
+
+1. Criacao de Area Logada para Troca de Moedas da Exchange Stellar

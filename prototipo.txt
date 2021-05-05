@@ -3,3 +3,6 @@
 1. Criacao de Area Logada para Troca de Moedas da Exchange Stellar
 
 2. Criacao de API para acesso externo a base de dados do usuario
+
+3. Criar Dashboard
+

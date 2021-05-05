@@ -10,3 +10,4 @@
 
 5. Criar Area para Webhook
 
+6. Criar Integração com API Binance

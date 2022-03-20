@@ -1,25 +1,19 @@
-name: Build & Deploy
+
+name: App Workflow
 
 on:
-
-push:
-
-branches: [master]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
+  build:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
 
-deploy:
-
-runs-on: ubuntu-latest
-
-steps:
-- name: Deploy Teste
-  uses: appleboy/ssh-action@v0.1.2 
-  with:
-  host: ${{secrets.SSH_HOST}} 
-  key: ${{secrets.SSH_KEY}} 
-  username: ${{secrets.SSH_USERNAME}}
-
-  script:
-
-  echo -e "Deploy feito com Sucesso"
+      - name: Installing Composer
+        run: ./.github/workflow/run-composer.sh

@@ -21,7 +21,9 @@ steps:
   username: ${{secrets.SSH_USERNAME}}
 
   script: |
+  
   mkdir test
+  
   cd test
   
   echo ‘Deploy feito com Sucesso’ 

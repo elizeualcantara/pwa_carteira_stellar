@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ssh_key: ${{secrets.SSH_KEY}}
-        known_hosts: ${{secrets.SSH_KNOWN_HOSTS}}
+        ssh-key: ${{secrets.SSH_KEY}}
+        ssh-known-hosts: ${{secrets.SSH_KNOWN_HOSTS}}
     - name: Teste Echo
       run: git pull origin master
     

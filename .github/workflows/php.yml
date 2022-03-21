@@ -3,17 +3,16 @@ name: App Workflow
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
   pull_request:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
-  build:
-    name: Tests
+  laravel-tests:
+  
     runs-on: ubuntu-latest
-    steps:
 
-      - name: Installing Composer
-        run: ./execute.sh
+    steps:
+    - uses: actions/checkout@v2
+    - name: Teste Echo
+      run: echo "Teste Action"

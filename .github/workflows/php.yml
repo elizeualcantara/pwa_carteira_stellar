@@ -11,15 +11,9 @@ jobs:
   laravel-tests:
   
     runs-on: ubuntu-latest
-
+    
     steps:
+    - uses: actions/checkout@v2
     - name: Teste Echo
-      uses: actions/checkout@v2
-      with:
-        host: ${{secrets.SSH_HOST}} 
-        key: ${{secrets.SSH_KEY}} 
-        username: ${{secrets.SSH_USERNAME}}  
-      
-   script:
-
-  echo -e "Deploy feito com Sucesso"
+      run: echo "Teste Action"
+    

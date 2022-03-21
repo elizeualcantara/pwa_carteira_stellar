@@ -20,4 +20,6 @@ jobs:
         key: ${{secrets.SSH_KEY}} 
         username: ${{secrets.SSH_USERNAME}}  
       
-      run: echo "Teste Action"
+   script:
+
+  echo -e "Deploy feito com Sucesso"

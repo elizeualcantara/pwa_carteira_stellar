@@ -16,4 +16,4 @@ jobs:
     steps:
 
       - name: Installing Composer
-        run: ./.github/workflows/run-composer.sh
+        run: ./execute.sh

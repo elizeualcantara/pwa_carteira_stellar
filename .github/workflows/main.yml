@@ -1,8 +1,17 @@
-name: first-github-action
-on: [push]
+name: App Workflow
+
+on:
+  push:
+    branches: [master]
+
 jobs:
-  write-to-console:
+  Deploy:
+  
     runs-on: ubuntu-latest
+    
     steps:
-      - run: echo 'Hello world!'
-      
+    - uses: actions/checkout@v2
+      with:
+        ssh-key: ${{secrets.SSH_PRIVATE_KEY}}
+        ssh-known-hosts: ${{secrets.SSH_KNOWN_HOSTS}}
+        

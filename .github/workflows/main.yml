@@ -27,4 +27,4 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
       - name: Stop the server
-        run: whoami       
+        run: git pull origin master       

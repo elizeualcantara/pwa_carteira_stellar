@@ -27,5 +27,5 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
       - name: Roda Git Pull
-        run: ls
+        run: ssh staging 'ls'
         

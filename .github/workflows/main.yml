@@ -1,5 +1,7 @@
 name: Deploy via SSH
-on: [workflow_dispatch]
+on:
+  push:
+    branches: [master]
 jobs:
   deploy:
     name: Deploy

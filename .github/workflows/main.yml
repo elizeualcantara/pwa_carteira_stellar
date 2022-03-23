@@ -1,26 +1,14 @@
-name: remote ssh command
-
-on: [push]
-  
+name: Deploy via SSH
+on: [workflow_dispatch]
 jobs:
-
-    build:
-
-      runs-on: ubuntu-latest
-
-      steps:
-
-        - name: executing remote ssh commands
-
-          uses: appleboy/ssh-action@master
-
-          env:
-
-            host: ${{ secrets.SSH_HOST }}
-
-            username: ${{ secrets.SSH_USERNAME }}
-
-            key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-            script: whoami
-
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy via SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: whoami           

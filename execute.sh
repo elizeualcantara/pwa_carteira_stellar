@@ -1,2 +1,2 @@
 #!/bin/sh
-echo -e "Deploy feito com Sucesso" 
+echo -e "Atualizacao feito com Sucesso" 

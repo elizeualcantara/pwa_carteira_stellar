@@ -27,6 +27,5 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
       - name: Roda Git Pull
-        run: |
-         cd /var/www/html/pwa_carteira_stellar/
-         git pull origin master
+        run: ls
+        

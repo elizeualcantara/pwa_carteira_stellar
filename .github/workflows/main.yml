@@ -15,3 +15,6 @@ jobs:
         ssh-key: ${{secrets.SSH_PRIVATE_KEY}}
         ssh-known-hosts: ${{secrets.SSH_KNOWN_HOSTS}}
         
+    - name: Teste Echo
+      run: git pull origin master
+        
